@@ -1,0 +1,28 @@
+name: DiscordWebhookPoster
+version: '${version}'
+main: com.tundra.github.discordwebhookposter.DiscordWebhookPoster
+api-version: 1.18
+authors: [ Tundra_Climate ]
+description: Post DiscordWebhook
+
+commands:
+  d:
+    description: Discord Commands
+  dwh:
+    description: Discord Webhook
+    permission: dwh.send
+    permission-message: "§cyou don't have dwh.send!"
+
+permissions:
+  dwh.*:
+    description: All Permisiion
+    default: op
+    children:
+      dwh.send: true
+      dwh.openbuilder: true
+  dwh.send:
+    description: can sending
+    default: false
+  dwh.openbuilder:
+    description: can open Webhook Builder
+    default: false

@@ -9,9 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class MainCommand implements CommandExecutor {
     public MainCommand(JavaPlugin plugin){plugin.getCommand("d").setExecutor(this);}
 
-    public static void init() {
-        SubCommand.subcommands.put("webhook", new WebhookSubcommand());
-    }
+    public static void init() {SubCommand.subcommands.put("webhook", new WebhookSubcommand());}
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
